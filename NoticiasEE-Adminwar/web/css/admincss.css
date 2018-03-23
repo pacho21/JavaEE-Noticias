@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-feb-2018, 18:02:55
+    Author     : admin
+*/
+
+#divHead{
+    margin:1%!important;
+     background-image: url(../img/bhead.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+}
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+        url('http://diyshoes.vans.co.in/assets/img/en-US/loading.gif') 
+        50% 50% 
+        no-repeat;
+}
+body.loading {
+    overflow: hidden;   
+}
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}

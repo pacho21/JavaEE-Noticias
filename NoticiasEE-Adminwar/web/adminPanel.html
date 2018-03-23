@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--Bootsrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--my css-->
+        <link rel='stylesheet' href='css/admincss.css'>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+        <script src="js/admin.js"></script>
+        <!--Fileupload-->
+        <script src='js/fileinput.min.js'></script>
+        <link rel="stylesheet" type="text/css" href="css/fileinput.min.css"> 
+    </head>
+    <body>
+        <div id="divHead" class="jumbotron text-center"><h1>NoticiasNET</h1>
+            <br>
+        </div>        
+        <div class="container">
+
+            <form method="post" id="subNoticia" accept-charset="UTF-8" >
+                <div class="form-group">
+                    <input required type="text" class="form-control" id="inp_title" placeholder="Titulo de la noticia" name="title">
+                    <small class="form-text text-muted">Titulo que se mostrara de la noticia.</small>
+                </div>
+                <div class="form-group">
+                    <label for="lblImg">Elige la imágen de la noticia</label>
+                    <input id="inImg" required type="file" class="file" data-show-upload="false" data-show-caption="true" data-allowed-file-extensions='["jpg"]' name="inputImg">
+                    <small id="fileHelp" class="form-text text-muted">Esta es la imagen que se utilizara para la página web.</small>
+                </div>
+                <div class="form-group">
+                    <textarea id="mytextarea" name="description"></textarea>
+                </div>                    
+                <div class="form-group row">
+                    <div class="col-sm-10 my-2">
+                        <button id="sendNoticia" type="submit" form="subNoticia" class="btn btn-primary ">Enviar noticia</button>
+                    </div>
+                </div>
+            </form>            
+        </div>
+        <div class="modal"><!-- Place at bottom of page --></div>
+    </body>
+</html>
